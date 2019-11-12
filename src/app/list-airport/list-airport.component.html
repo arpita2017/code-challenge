@@ -1,0 +1,22 @@
+
+<h1>
+    List of Airports
+  </h1>
+  <table  style="width: 33%">
+    <tr>
+       
+      <th>Airportname</th>
+      <th>region </th>
+      <th>country </th>
+      <th>city </th>
+    </tr>
+    <tr *ngFor="let airport of airports">
+    
+      <td>{{ airport.airportName }}</td>    
+      <td>{{ airport.region.regionName}}</td>
+      <td>{{ airport.country.countryName}}</td>
+      <td>{{ airport.city.cityName }}</td>
+      
+      <td><button class="common-btn btn" (click)="displayDetail(airport.city.timeZoneName, airport.location.aboveSeaLevel)">>></button></td>
+    </tr>
+  </table>
