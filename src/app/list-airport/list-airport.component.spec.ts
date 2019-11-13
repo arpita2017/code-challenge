@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListAirportComponent } from './list-airport.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ListAirportComponent', () => {
   let component: ListAirportComponent;
@@ -8,7 +9,10 @@ describe('ListAirportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListAirportComponent ]
+      declarations: [ ListAirportComponent ],
+      providers:[
+        {provide:AirportService , useclass :AirportServiceMock}
+      ]
     })
     .compileComponents();
   }));
@@ -19,7 +23,14 @@ describe('ListAirportComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should instantiate', () => {
+    expect(component).toBeDefined();
   });
+  
+  
+
+
+  
+  
+
 });

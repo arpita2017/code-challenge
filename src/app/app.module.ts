@@ -8,13 +8,15 @@ import { HttpClientModule }    from '@angular/common/http';
 import  { AirportService} from './airport.service';
 import { DetailAirportComponent } from './detail-airport/detail-airport.component';
 import { ListAirportComponent } from './list-airport/list-airport.component';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailAirportComponent,
-    ListAirportComponent
+    ListAirportComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

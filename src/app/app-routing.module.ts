@@ -6,6 +6,7 @@ import { ListAirportComponent } from './list-airport/list-airport.component';
 
 
 const routes: Routes = [
+  {path:'', redirectTo:'/list' ,pathMatch:'full'},
   {path:'detail',component:DetailAirportComponent},
   {path:'list',component:ListAirportComponent}
 ];

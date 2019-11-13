@@ -19,7 +19,9 @@ describe('DetailAirportComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the detailcomponent', () => {
+    const fixture = TestBed.createComponent(DetailAirportComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

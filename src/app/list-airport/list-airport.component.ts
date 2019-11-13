@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class ListAirportComponent implements OnInit {
 
   airports = new Array<Airport>();
-
+  //airports : any;
+  showSpinner: boolean = true;
 
   constructor( airportService:AirportService, private router: Router ) {
     airportService.getAirports().subscribe(response => 
@@ -35,6 +36,7 @@ export class ListAirportComponent implements OnInit {
         });
       });
 
+      airportService.getAirports().subscribe(() => this.showSpinner = false)
   }
 
   displayDetail(timeZoneName,aboveSeaLevel){
@@ -47,7 +49,9 @@ export class ListAirportComponent implements OnInit {
 
 }
 
-ngOnInit(){}
+ngOnInit(){
+ 
+}
 
 
 

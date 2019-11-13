@@ -1,4 +1,6 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
 
+<div *ngIf="!showSpinner">
 <h1>
     List of Airports
   </h1>
@@ -20,3 +22,4 @@
       <td><button class="common-btn btn" (click)="displayDetail(airport.city.timeZoneName, airport.location.aboveSeaLevel)">>></button></td>
     </tr>
   </table>
+</div>
