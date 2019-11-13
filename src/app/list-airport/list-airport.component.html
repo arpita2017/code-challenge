@@ -1,25 +1,34 @@
-<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
 
-<div *ngIf="!showSpinner">
-<h1>
-    List of Airports
-  </h1>
-  <table  style="width: 33%">
-    <tr>
-       
-      <th>Airportname</th>
-      <th>region </th>
-      <th>country </th>
-      <th>city </th>
-    </tr>
-    <tr *ngFor="let airport of airports">
-    
-      <td>{{ airport.airportName }}</td>    
-      <td>{{ airport.region.regionName}}</td>
-      <td>{{ airport.country.countryName}}</td>
-      <td>{{ airport.city.cityName }}</td>
-      
-      <td><button class="common-btn btn" (click)="displayDetail(airport.city.timeZoneName, airport.location.aboveSeaLevel)">>></button></td>
-    </tr>
-  </table>
+<html>
+  <head>
+    <title>Airport list</title>
+  </head>
+
+<div >
+  <div  *ngIf="!showSpinner" >
+
+<h1 align="center">
+    List of Airports
+  </h1>
+  <table   style="width: 100%">
+    <tr>
+       
+      <th>Airportname</th>
+      <th>region </th>
+      <th>country </th>
+      <th>city </th>
+    </tr>
+    <tr *ngFor="let airport of airports">
+    
+      <td align="center">{{ airport.airportName }}</td>    
+      <td align="center">{{ airport.region.regionName}}</td>
+      <td align="center"> {{ airport.country.countryName}}</td>
+      <td align="center">{{ airport.city.cityName }}</td>
+      
+      <button class="common-btn btn" (click)="displayDetail(airport.city.timeZoneName, airport.location.aboveSeaLevel)">>></button>
+    </tr>
+  </table>
 </div>
+</div>
+</html>
